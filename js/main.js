@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-	$(".tile-wrap").setInterval(function(){
-		addClass("visible");}, 3000);
+	// $("#logo").delay(2000).removeClass("load-in");
 
 
 });

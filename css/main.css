@@ -22,6 +22,8 @@ svg{
 }
 body{
 	margin: 60px 30px;
+/*	animation: slideUp 2s ease 1;
+*/	animation-fill-mode: forwards;
 }
 a{
 	text-decoration: none;
@@ -54,9 +56,23 @@ h1,h2{
 }
 .section{
 	max-width: 840px;
-	margin-top: 90px;
+	margin-top: 60px;
 	border-top: solid 1px #fff;
 	padding-top: 20px;
+}
+.loadIn{
+	animation: loadIn 1s ease-in forwards;
+}
+
+@keyframes loadIn {
+	0% {
+		opacity: 0;
+		transform: translateY(90px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 .sans{
 	font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
@@ -70,6 +86,7 @@ h1,h2{
 .small-image{
 	width: 50%;
 	margin: 60px 0;
+	border: 10px #ffffff solid;
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px){
