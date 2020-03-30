@@ -22,8 +22,6 @@ svg{
 }
 body{
 	margin: 60px 30px;
-/*	animation: slideUp 2s ease 1;
-*/	animation-fill-mode: forwards;
 }
 a{
 	text-decoration: none;
@@ -38,7 +36,7 @@ p{
 	font-size: 38px;
 	line-height: 50px;
 	font-variant-ligatures: common-ligatures;
-	max-width: 800px;
+	width: 66.666%;
 }
 h1,h2{
 	font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
@@ -55,24 +53,10 @@ h1,h2{
 	width: 160px;
 }
 .section{
-	max-width: 840px;
+	widows: 100%;
 	margin-top: 60px;
 	border-top: solid 1px #fff;
 	padding-top: 20px;
-}
-.loadIn{
-	animation: loadIn 1s ease-in forwards;
-}
-
-@keyframes loadIn {
-	0% {
-		opacity: 0;
-		transform: translateY(90px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
 }
 .sans{
 	font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
@@ -84,9 +68,8 @@ h1,h2{
 
 }
 .small-image{
-	width: 50%;
+	width: 25%;
 	margin: 60px 0;
-	border: 10px #ffffff solid;
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px){
@@ -112,12 +95,36 @@ h1,h2{
 
 }
 
-/*@media screen and (min-width: 1440px){
+@media screen and (min-width: 1440px){
 
+body{
+	margin: 120px 90px;
+}
+#logo{
+	width: 200px;
+}
+p{
+	font-size: 60px;
+	line-height: 70px;
+}
+h1,h2{
+	font-size: 14px;
+	letter-spacing: 2px;
+	line-height: 20px;
+}
+.section{
+	margin-top: 120px;
+}
+.small-image{
+	margin: 120px 0;
+}
+.sans{
+	font-size: 14px;
+	letter-spacing: 2px;
+	line-height: 20px;
+}
 
-
-
-}*/
+}
 
 /* Clearfix */
 
