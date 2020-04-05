@@ -73,6 +73,190 @@
 				<a href="mailto:lesley@lesleymcintyresalon.com?Subject=" target="_top">lesley@lesleymcintyresalon.com</a>
 			</p>
 		</div>
+		<div class="section">
+			<h2>
+				Location
+			</h2>
+			<div id="map"></div>
+			    <script>
+			// Initialize and add the map
+			function initMap() {
+			  	var styledMapType = new google.maps.StyledMapType(
+		            [
+		               {
+		                  "elementType": "geometry",
+		                  "stylers": [
+		                    {
+		                      "color": "#f5f5f5"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "elementType": "geometry.fill",
+		                  "stylers": [
+		                    {
+		                      "color": "#d0d6ca"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "elementType": "labels.icon",
+		                  "stylers": [
+		                    {
+		                      "visibility": "off"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "elementType": "labels.text.fill",
+		                  "stylers": [
+		                    {
+		                      "color": "#5e5e5e"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "elementType": "labels.text.stroke",
+		                  "stylers": [
+		                    {
+		                      "color": "#f5f5f5"
+		                    },
+		                    {
+		                      "visibility": "off"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "poi",
+		                  "stylers": [
+		                    {
+		                      "visibility": "off"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "road",
+		                  "elementType": "geometry",
+		                  "stylers": [
+		                    {
+		                      "color": "#ffffff"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "road.highway",
+		                  "elementType": "geometry.fill",
+		                  "stylers": [
+		                    {
+		                      "color": "#ffffff"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "road.local",
+		                  "elementType": "geometry.fill",
+		                  "stylers": [
+		                    {
+		                      "color": "#b7bbb3"
+		                    },
+		                    {
+		                      "visibility": "on"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "road.local",
+		                  "elementType": "geometry.stroke",
+		                  "stylers": [
+		                    {
+		                      "visibility": "off"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "road.local",
+		                  "elementType": "labels",
+		                  "stylers": [
+		                    {
+		                      "visibility": "off"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "transit",
+		                  "elementType": "labels.text.fill",
+		                  "stylers": [
+		                    {
+		                      "color": "#5e5e5e"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "transit.line",
+		                  "elementType": "geometry.fill",
+		                  "stylers": [
+		                    {
+		                      "color": "#ffffff"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "transit.line",
+		                  "elementType": "geometry.stroke",
+		                  "stylers": [
+		                    {
+		                      "visibility": "off"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "transit.station.rail",
+		                  "stylers": [
+		                    {
+		                      "visibility": "on"
+		                    }
+		                  ]
+		                },
+		                {
+		                  "featureType": "transit.station.rail",
+		                  "elementType": "labels.text.stroke",
+		                  "stylers": [
+		                    {
+		                      "visibility": "off"
+		                    }
+		                  ]
+		                }
+		            ],
+	            	{name: 'Styled Map'});
+							  // The location of Uluru
+					var uluru = {lat: 51.493818, lng: -0.175278};
+					  // The map, centered at Uluru
+					var map = new google.maps.Map(
+					    document.getElementById('map'), {zoom: 16, center: uluru,
+						mapTypeControlOptions: {
+						            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+						                    'styled_map']
+						          }
+					      });
+					  // The marker, positioned at Uluru
+					var marker = new google.maps.Marker({position: uluru, map: map});
+
+					        map.mapTypes.set('styled_map', styledMapType);
+       						map.setMapTypeId('styled_map');
+       			}
+
+
+			    </script>
+			    <!--Load the API from the specified URL
+			    * The async attribute allows the browser to render the page while the API loads
+			    * The key parameter will contain your own API key (which is not needed for this tutorial)
+			    * The callback parameter executes the initMap() function
+			    -->
+			    <script async defer
+			    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnIwY2LQR7oxIO0Vsruml-dDyE-hNlSag&callback=initMap">
+			    </script>			
+		</div>
+
 
 		<!-- Javascript -->
 
