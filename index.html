@@ -229,10 +229,10 @@
 		            ],
 	            	{name: 'Styled Map'});
 							  // The location of Uluru
-					var uluru = {lat: 51.493818, lng: -0.175278};
+					var uluru = {lat: 51.493818, lng: -0.175278, center: {lat: -33, lng: 151}};
 					  // The map, centered at Uluru
 					var map = new google.maps.Map(
-					    document.getElementById('map'), {zoom: 16, center: uluru,
+					    document.getElementById('map'), {zoom: 16, center: uluru, disableDefaultUI: true,
 						mapTypeControlOptions: {
 						            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
 						                    'styled_map']
